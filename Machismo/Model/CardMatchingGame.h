@@ -20,4 +20,9 @@
 
 @property (nonatomic, readonly) int score;
 
+@property (nonatomic, readonly) int scorePerFlip;
+
+@property (strong, nonatomic) NSMutableArray *comparedCards;
+
+@property (nonatomic) int cardMode;
 @end

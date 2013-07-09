@@ -55,13 +55,35 @@
 
 - (int)match:(NSArray *)otherCards {
     int score = 0;
-    for (PlayingCard *card in otherCards) {
-        if (card.rank == self.rank) {
+    if (otherCards.count == 1) {
+        for (PlayingCard *card in otherCards) {
+            if (card.rank == self.rank) {
+                score = 4;
+            } else if ([card.suit isEqualToString:self.suit]) {
+                score = 1;
+            }
+        }
+    } else if (otherCards.count == 2) {
+        int rank1 = self.rank;
+        int rank2 = ((PlayingCard *)[otherCards objectAtIndex:0]).rank;
+        int rank3 = ((PlayingCard *)[otherCards objectAtIndex:1]).rank;
+        NSString *suit1 = self.suit;
+        NSString *suit2 = ((PlayingCard *)[otherCards objectAtIndex:0]).suit;
+        NSString *suit3 = ((PlayingCard *)[otherCards objectAtIndex:1]).suit;
+        if (rank1 == rank2 && rank1 == rank3) {
+            score = 12;
+        } else if (rank1 == rank2 || rank2 == rank3 || rank1 == rank3) {
             score = 4;
-        } else if ([card.suit isEqualToString:self.suit]) {
+            if (suit1 == suit2 || suit2 == suit3 || suit1 == suit3) {
+                score = 6;
+            }
+        } else if (suit1 == suit2 && suit1 == suit3) {
+            score = 4;
+        } else if (suit1 == suit2 || suit2 == suit3 || suit1 == suit3) {
             score = 1;
         }
-    }
+   }
+    
     return score;
 }
 

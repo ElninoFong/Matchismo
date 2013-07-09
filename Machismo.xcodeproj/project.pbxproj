@@ -23,6 +23,7 @@
 		346E0D25177A52B50069833E /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 346E0D24177A52B50069833E /* PlayingCard.m */; };
 		346E0D29177A52CE0069833E /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 346E0D28177A52CE0069833E /* PlayingCardDeck.m */; };
 		346E0D2C177BC3370069833E /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 346E0D2B177BC3370069833E /* CardMatchingGame.m */; };
+		34ACF237178B45BB000C111D /* cardback.png in Resources */ = {isa = PBXBuildFile; fileRef = 34ACF236178B45BB000C111D /* cardback.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		346E0D28177A52CE0069833E /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
 		346E0D2A177BC3370069833E /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Model/CardMatchingGame.h; sourceTree = "<group>"; };
 		346E0D2B177BC3370069833E /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Model/CardMatchingGame.m; sourceTree = "<group>"; };
+		34ACF236178B45BB000C111D /* cardback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardback.png; path = Resources/cardback.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				346E0CFF177A40B80069833E /* Machismo */,
+				34ACF235178B459B000C111D /* Resources */,
 				346E0D00177A40B80069833E /* Supporting Files */,
 				346E0CF8177A40B80069833E /* Frameworks */,
 				346E0CF7177A40B80069833E /* Products */,
@@ -141,6 +144,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		34ACF235178B459B000C111D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				34ACF236178B45BB000C111D /* cardback.png */,
+			);
+			name = Resources;
+			path = Machismo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +210,7 @@
 				346E0D0E177A40B80069833E /* Default@2x.png in Resources */,
 				346E0D10177A40B80069833E /* Default-568h@2x.png in Resources */,
 				346E0D13177A40B80069833E /* MainStoryboard.storyboard in Resources */,
+				34ACF237178B45BB000C111D /* cardback.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +351,7 @@
 				346E0D1B177A40B80069833E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
