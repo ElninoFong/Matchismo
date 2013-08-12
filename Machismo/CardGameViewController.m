@@ -43,13 +43,13 @@
         cardButton.alpha = cardButton.enabled ? 1.0 : 0.3;
     }
     self.scoresLabel.text = [NSString stringWithFormat:@"Scores: %d", self.game.score];
-    NSLog(@"Scores update to %d", self.game.score);
+//    NSLog(@"Scores update to %d", self.game.score);
 }
 
 - (void)setFlipCount:(int)flipCount {
     _flipCount = flipCount;
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d",self.flipCount];
-    NSLog(@"Flips update to %d", self.flipCount);
+//    NSLog(@"Flips update to %d", self.flipCount);
 }
 
 - (IBAction)flipCard:(UIButton *)sender {

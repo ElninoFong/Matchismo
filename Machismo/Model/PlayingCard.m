@@ -55,11 +55,15 @@
 
 - (int)match:(NSArray *)otherCards {
     int score = 0;
-    for (PlayingCard *card in otherCards) {
-        if (card.rank == self.rank) {
-            score = 4;
-        } else if ([card.suit isEqualToString:self.suit]) {
-            score = 1;
+    if ([otherCards count] == 1) {
+        id otherCard = [otherCards lastObject];
+        if ([otherCard isKindOfClass:[PlayingCard class]]) {
+            PlayingCard *otherPlayingCard = (PlayingCard *)otherCard;
+            if ([otherPlayingCard.suit isEqualToString:self.suit]) {
+                score = 1;
+            } else if (otherPlayingCard.rank == self.rank) {
+                score = 4;
+            }
         }
     }
     return score;
